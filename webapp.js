@@ -5,3 +5,7 @@ var name = prompt("What is your name?")
 
 document.write("You see two things in the cave: A sword and a backage of bread. Which do you take? Only one will fit in your backpack.");
 
+function display_story(choice) {
+	if(choice == "sword")
+	document.getElementById("story").innerHTML = "You grab the blade";
+}
