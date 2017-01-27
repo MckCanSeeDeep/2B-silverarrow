@@ -1,6 +1,18 @@
 @charset "UTF-8";
 /* CSS Document */
 
+
+.button{
+	width: 40px;
+	height: 30px;
+	border: none;
+	border-radius: 8px;
+	margin-left: 17px;
+	cursor: pointer;
+	border-top: 2px solid transparent;
+	
+}
+
 #wrapper {
 		width: 960px;
 		padding: 5px;
@@ -43,3 +55,4 @@ body {
 		border-radius: 15px;
 		padding-left: 10px;
 		padding-right: 50px;
+}
