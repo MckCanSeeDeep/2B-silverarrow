@@ -1,3 +1,67 @@
 @charset "UTF-8";
 /* CSS Document */
 
+
+.button{
+	width: 40px;
+	height: 30px;
+	border: none;
+	border-radius: 8px;
+	margin-left: 17px;
+	cursor: pointer;
+	border-top: 2px solid transparent;
+	
+}
+
+#wrapper {
+		width: 960px;
+		padding: 5px;
+		margin: 20px auto;
+}
+
+#health {	
+	float:right;
+	width: 300px;
+}
+
+#choices {
+		float:left;
+		width: 500px;
+		height:300px;
+}
+
+#goal {
+		float: left;
+		width: 500px;
+	
+}
+
+#explanation {
+		float: left;
+		width: 500px;
+		width: 950px;
+		padding: 5px;
+		margin: 20px auto;
+	
+}
+
+#inventory {
+	float:right;
+	width:300px;
+	height:300px;
+}
+
+body {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+		color: #001366;
+		background-color: #8ED1EC;
+		background-size: 100%;
+}
+
+#health, #goal, #choices, #inventory, #explanation {
+		background-color: rgba(0, 178, 142, 0.8);
+		margin-bottom: 10px;
+		border-radius: 15px;
+		padding-left: 10px;
+		padding-right: 50px;
+}
