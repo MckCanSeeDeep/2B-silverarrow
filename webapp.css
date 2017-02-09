@@ -36,6 +36,15 @@
 	
 }
 
+#explanation {
+		float: left;
+		width: 500px;
+		width: 950px;
+		padding: 5px;
+		margin: 20px auto;
+	
+}
+
 #inventory {
 	float:right;
 	width:300px;
@@ -49,7 +58,7 @@ body {
 		background-size: 100%;
 }
 
-#health, #goal, #choices, #inventory {
+#health, #goal, #choices, #inventory, #explanation {
 		background-color: rgba(0, 178, 142, 0.8);
 		margin-bottom: 10px;
 		border-radius: 15px;
