@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/*onload page*/
+#rock, #sword {
+	display: none;
+}
 
 .button{
 	width: 40px;
@@ -27,7 +31,7 @@
 #choices {
 		float:left;
 		width: 500px;
-		height:400px;
+		height:300px;
 }
 
 #goal {
@@ -38,6 +42,7 @@
 
 #explanation {
 		float: left;
+		width: 500px;
 		width: 950px;
 		padding: 5px;
 		margin: 20px auto;
