@@ -27,12 +27,20 @@
 #choices {
 		float:left;
 		width: 500px;
-		height:300px;
+		height:400px;
 }
 
 #goal {
 		float: left;
 		width: 500px;
+	
+}
+
+#explanation {
+		float: left;
+		width: 950px;
+		padding: 5px;
+		margin: 20px auto;
 	
 }
 
@@ -44,12 +52,12 @@
 
 body {
 		font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
-		color: ;
-		background-color:;
+		color: #001366;
+		background-color: #8ED1EC;
 		background-size: 100%;
 }
 
-#health, #goal, #choices, #inventory {
+#health, #goal, #choices, #inventory, #explanation {
 		background-color: rgba(0, 178, 142, 0.8);
 		margin-bottom: 10px;
 		border-radius: 15px;
