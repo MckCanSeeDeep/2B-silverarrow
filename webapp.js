@@ -1,3 +1,4 @@
+
 // JavaScript Document
 
 //Introduction
@@ -72,95 +73,11 @@ function story_doors(choice) {
 						document.getElementById("story").innerHTML = "You attempt to scramble up the tree, and feel the wolves' hot breath on your heels. You grab at a branch, but it breaks in your hand. You fall to the ground and are winded as your back crashes into the leaves. The wolves growl and pounce at you. You're DEAD. TERMINATED.";
 			
 				if (choice == "Run for the rusty door")
-						document.getElementById("story").innerHTML = "You manage to lever the door open with your sword. You quickly close the door behind you and barely escape the razor sharp teeth of the wild-eyed wolves. You are now in a dark, empty-halled building.";
+						document.getElementById("story").innerHTML = "You manage to lever the door open with your sword. You quickly close the door behind you and barely escape the razor sharp teeth of the wild-eyed wolves. You are now in a dark, empty-halled building."; */
+					
 			}
 	
 	
-//Branching Back to the Building*/
-
-
-//Introduction
-
-document.getElementById("story").innerHTML = "You wake up in a dark, dreary cave. You have no memory of your previous life, and the only thing in your mind is the echo of water dripping from the ceiling. You grab a backpack that sits in front of you on the cave floor. You have a pocket knife, some rope, dried fruit that won't last long, a water bottle half-full, and a jagged rock.";
-var name = prompt("What is your name?")
-
-document.getElementById("story").innerHTML ="You see two things in the cave: A sword and a package of bread. Which do you take? Only one will fit in your backpack.";
-
-function story_inventory(choice) {
-	if(choice == "sword")
-	document.getElementById("story").innerHTML = "You grab the blade.";
-	if(choice == "bread")
-	document.getElementById("story").innerHTML = "You pack the bread.";
-}
-
-//Door 1 or 2
-
-document.getElementById("story").innerHTML = "You notice a long hallway leading out of the cave. When you reach the end of the hallway, you are met with two doors. One is bright green and earthy, surrounded by vines. A cool breeze wafts from the crack beneath it. The other is black as coal, and is strangled with dried, withering tree branches. Intense heat flames from it. Which door will you use?";
-
-var bread;
-function displayStory(choice) {
-	var story = "";
-	var image = "";
-	var btn1 = "";
-	var btn2 = "";
-	switch(choice) {
-		
-		case "bread":
-		case "sword":
-			story = "You notice a long hallway leading out of the cave. When you reach the end of the hallway, you are met with two doors. One is bright green and earthy, surrounded by vines. A cool breeze wafts from the crack beneath it. The other is black as coal, and is strangled with dried, withering tree branches. Intense heat flames from it. Which door will you choose?";
-			btn1 = document.createElement("BUTTON");
-			btn1.setAttribute("onClick", "changeStory('door1')");
-			btn1.innerHTML = "Door 1";
-			btn2 = document.createElement("BUTTON");
-			btn2.setAttribute("onClick", "changeStory('door2')");
-			btn2.innerHTML = "Door 2";
-			//image = "";
-			break;
-		
-		
-	//door 1	
-		case "door1":
-			if( bread ) {
-				displayStory("standup/friends");
-			}
-			else {
-				displayStory("standup/keepheaddown");
-			}
-			break;
-			
-	//(bread) stand up/ make friends
-		case "standup/friends":
-			story = "You turn the mahogany handle of the door. You emerge on a hill surrounded by rolling fields. Down the hill, peasants drenched in sweat and dressed in faded rags labor away, picking some kind of pale blue cotton. Cruel-faced supervisors pace behind them, watching their work and carrying sharp-looking batons. You walk down the hill, hoping that your own tattered clothes will blend in with theirs. You come to an area where no supervisors seem to be watching. You chose the BREAD. The people have hunger-hollowed cheeks, so you give them some of your bread. They immediately trust you, and allow you to work beside them and hide yourself. The few people near you now trust you, and they decide to help conceal you. The supervisor arrives to monitor your laboring progress and begins taunting those beside you. Will you stand up to the supervisor or make friends with him"
-			btn1 = document.createElement("BUTTON");
-			btn1.setAttribute("onClick", "changeStory('makeFriends')");
-			btn1.innerHTML = "You crack a funny joke at the supervisor. He looks at you blankly for a moment, but then his dark bearded face stretches into a smile. He pats your back and tells you that he will help you, sending you to a building in the distance.";
-			btn2 = document.createElement("BUTTON");
-			btn2.setAttribute("onClick", "changeStory('deathBySup1')");
-			btn2.innerHTML = "You stand up, angered by his taunts. He narrows his eyes at you and you glare at each other for a moment. Then ";
-			//image = "";
-			break;
-			
-	//(sword) stand up/keep head down
-		case "keepHeadDown"
-		story = "The taunts that the supervisor shoots at the laborers anger you. You stand up and he narrows his eyes at you. For a brief moment, you glare at each other. Suddenly, all you can see is the glint of his sword in the sunlight and then....darkness. sorry, you're DEAD!";
-			btn1 = document.createElement("BUTTON");
-			btn1.setAttribute("onClick", "changeStory('makeFriends')");
-			btn1.innerHTML = "Make friends";
-			btn2 = document.createElement("BUTTON");
-			btn2.setAttribute("onClick", "changeStory('deathBySup1')");
-			btn2.innerHTML = "Standup for the laborers";
-		
-//door 2		
-		case "door2":
-			break;
-		case "standup/friends":
-			break;
-	}
-	document.getElementById("story").innerHTML = story;
-	//document.getElementById("image").setAttribute("src", image);
-	document.getElementById("choices").innerHTML = btn1 + btn2;
-}
-		
 	/* OLD CODE	
 		
 		if(choice == "First door")
@@ -238,3 +155,135 @@ function displayStory(choice) {
 	}
 	*/
 	
+
+
+//Introduction
+
+document.getElementById("story").innerHTML = "You wake up in a dark, dreary cave. You have no memory of your previous life, and the only thing in your mind is the echo of water dripping from the ceiling. You grab a backpack that sits in front of you on the cave floor. You have a pocket knife, some rope, dried fruit that won't last long, a water bottle half-full, and a jagged rock.";
+var name = prompt("What is your name?")
+
+document.getElementById("story").innerHTML ="You see two things in the cave: A sword and a package of bread. Which do you take? Only one will fit in your backpack.";
+
+function story_inventory(choice) {
+	if(choice == "sword")
+	document.getElementById("story").innerHTML = "You grab the blade.";
+	if(choice == "bread")
+	document.getElementById("story").innerHTML = "You pack the bread.";
+}
+
+//Door 1 or 2
+
+document.getElementById("story").innerHTML = "You notice a long hallway leading out of the cave. When you reach the end of the hallway, you are met with two doors. One is bright green and earthy, surrounded by vines. A cool breeze wafts from the crack beneath it. The other is black as coal, and is strangled with dried, withering tree branches. Intense heat flames from it. Which door will you use?";
+
+var bread;
+function displayStory(choice) {
+	var story = "";
+	var image = "";
+	
+	var btn1 = "";
+	var btn2 = "";
+	switch(choice) {
+		
+		case "bread":
+		case "sword":
+			story = "You notice a long hallway leading out of the cave. When you reach the end of the hallway, you are met with two doors. One is bright green and earthy, surrounded by vines. A cool breeze wafts from the crack beneath it. The other is black as coal, and is strangled with dried, withering tree branches. Intense heat flames from it. Which door will you choose?";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "changeStory('door1')");
+			btn1.innerHTML = "Door 1";
+			btn2 = document.createElement("BUTTON");
+			btn2.setAttribute("onClick", "changeStory('door2')");
+			btn2.innerHTML = "Door 2";
+			//image = "";
+			break;
+		
+		
+	//door 1	
+		case "door1":
+			if( bread ) {
+				displayStory("standup/friends");
+			}
+			else {
+				displayStory("standUp/keepHeadDown");
+			}
+			break;
+			
+	//(bread) stand up/ make friends
+		case "standup/friends":
+			story = "You turn the mahogany handle of the door. You emerge on a hill surrounded by rolling fields. Down the hill, peasants drenched in sweat and dressed in faded rags labor away, picking some kind of pale blue cotton. Cruel-faced supervisors pace behind them, watching their work and carrying sharp-looking batons. You walk down the hill, hoping that your own tattered clothes will blend in with theirs. You come to an area where no supervisors seem to be watching. You chose the BREAD. The people have hunger-hollowed cheeks, so you give them some of your bread. They immediately trust you, and allow you to work beside them and hide yourself. The few people near you now trust you, and they decide to help conceal you. The supervisor arrives to monitor your laboring progress and begins taunting those beside you. Will you stand up to the supervisor or make friends with him";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "changeStory('makeFriends')");
+			btn1.innerHTML = "Make friends";
+			btn2 = document.createElement("BUTTON");
+			btn2.setAttribute("onClick", "changeStory('standUpToSupervisor')");
+			btn2.innerHTML = "Stand up to the supervisor";
+			//image = "";
+			break;
+		
+		case "makeFriends":
+		story = "You crack a funny joke at the supervisor. He looks at you blankly for a moment, but then his dark bearded face stretches into a smile. He pats your back and tells you that he will help you, sending you to a building in the distance.";
+			break;
+			
+		case "standUpToSupervisor":
+		story = "The taunts that the supervisor shoots at the laborers anger you. You stand up and he narrows his eyes at you. For a brief moment, you glare at each other. Suddenly, all you can see is the glint of his sword in the sunlight and then....darkness. sorry, you're DEAD!";
+		break;
+		//GO BACK TO CHECKPOINT//
+		
+	//(sword) standUp/keep head down
+	case "standUp/keepHeadDown":
+			story = "You turn the mahogany handle of the door. You emerge on a hill surrounded by rolling fields. Down the hill, peasants drenched in sweat and dressed in faded rags labor away, picking some kind of pale blue cotton. Cruel-faced supervisors pace behind them, watching their work and carrying sharp-looking batons. You walk down the hill, hoping that your own tattered clothes will blend in with theirs. You come to an area where no supervisors seem to be watching. You chose the BREAD. The people have hunger-hollowed cheeks, so you give them some of your bread. They immediately trust you, and allow you to work beside them and hide yourself. The few people near you now trust you, and they decide to help conceal you. The supervisor arrives to monitor your laboring progress and begins taunting those beside you. Will you stand up to the supervisor or keep your head down and continue working?";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "changeStory('keepHeadDown')");
+			btn1.innerHTML = "Make friends";
+			btn2 = document.createElement("BUTTON");
+			btn2.setAttribute("onClick", "changeStory('standUp')");
+			btn2.innerHTML = "Stand up to the supervisor";
+			//image = "";
+			break;
+			
+		case "keepHeadDown":
+		story = "Though you stay well hidden among the group of laborers, you notice the supervisor is eyeing you strangely. You realize that he sees the sword hidden in your belt. You look back at him, hoping he will do nothing. Suddenly, he nocks an arrow in the bow on his back. Before you can react, he has released the bowstring. Sorry, you're DEAD!";
+	break;
+		//RETURN TO CHECKPOINT
+		
+		case "standUp"
+		story = "The supervisor flings his knife at you in anger. Quickly thinking, you dart to the side and catch it. You run to a building in the distance, and foolishly promise to come back for the other workers.";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "changeStory('makeFriends')");
+			btn1.innerHTML = "Make friends";
+			btn2 = document.createElement("BUTTON");
+			btn2.setAttribute("onClick", "changeStory('deathBySup1')");
+			btn2.innerHTML = "Standup for the laborers";
+		break;
+//door 2	
+case "door2":
+			if( bread ) {
+				displayStory("You use the end of your shirt to turn the knob, as it is too hot. You enter a dark forest of fire-blackened trees. The sky is so full of smog that it has a grayish tinge and it is impossible to tell whether it is day or night. The only light in the vicinity comes from the dim glow of flames licking at the trees. The faint howling of wolves can be heard in the distance, miles away. After a moment you realize the howls are getting louder and louder. Suddenly, a gray blur leaps out of the shadowy trees. Several more gray blurs follow it. You try to feed the bread to the wolves but your are in vain. The wolves lunge and pin you to the ground. The last thing you hear before the darkness consumes you is their howls. Sorry, you're DEAD!");
+			}
+			else {
+				displayStory("You use the end of your shirt to turn the knob, as it is too hot. You enter a dark forest of fire-blackened trees. The sky is so full of smog that it has a grayish tinge and it is impossible to tell whether it is day or night. The only light in the vicinity comes from the dim glow of flames licking at the trees. The faint howling of wolves can be heard in the distance, miles away. After a moment you realize the howls are getting louder and louder. Suddenly, a gray blur leaps out of the shadowy trees. Several more gray blurs follow it.");
+			}
+			break;
+				
+		case "run for door/climb tree":
+		story = "Since you chose the SWORD, you are able to fend off the wolves. However, there are too many of them. You desperately sprint off into the trees and see two options. You can either run for a rusty door covered in ivy, or climb a tree";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "changeStory('climb a tree')");
+			btn1.innerHTML = "You attempt to scramble up the tree, and feel the wolves' hot breath on your heels. You grab at a branch, but it breaks in your hand. You fall to the ground and are winded as your back crashes into the leaves. The wolves growl and pounce at you. Sorry, you're DEAD!";
+			btn2 = document.createElement("BUTTON");
+			btn2.setAttribute("onClick", "changeStory('run for door')");
+			btn2.innerHTML = "You manage to lever the door open with your sword. You quickly close the door behind you and barely escape the razor sharp teeth of the wild-eyed wolves. You are now in a dark, empty-halled building.";
+			break;
+		case "standup/friends":
+			break;
+	}
+	// change content on page
+	document.getElementById("story").innerHTML = story;
+    var buttons = document.getElementById("buttons");
+    while (buttons.firstChild) {
+      buttons.removeChild(buttons.firstChild);
+    }
+	document.getElementById("buttons").appendChild(btn1);
+    document.getElementById("buttons").appendChild(btn2);
+
+
+		
