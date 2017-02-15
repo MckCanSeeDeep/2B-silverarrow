@@ -200,7 +200,7 @@ function displayStory(choice) {
 	//door 1	
 		case "door1":
 			if( bread ) {
-				displayStory("standup/friends");
+				displayStory("standUpToSupervisor/makeFriends");
 			}
 			else {
 				displayStory("standUp/keepHeadDown");
@@ -208,7 +208,7 @@ function displayStory(choice) {
 			break;
 			
 	//(bread) stand up/ make friends
-		case "standup/friends":
+		case "standUpToSupervisor/makeFriends":
 			story = "You turn the mahogany handle of the door. You emerge on a hill surrounded by rolling fields. Down the hill, peasants drenched in sweat and dressed in faded rags labor away, picking some kind of pale blue cotton. Cruel-faced supervisors pace behind them, watching their work and carrying sharp-looking batons. You walk down the hill, hoping that your own tattered clothes will blend in with theirs. You come to an area where no supervisors seem to be watching. You chose the BREAD. The people have hunger-hollowed cheeks, so you give them some of your bread. They immediately trust you, and allow you to work beside them and hide yourself. The few people near you now trust you, and they decide to help conceal you. The supervisor arrives to monitor your laboring progress and begins taunting those beside you. Will you stand up to the supervisor or make friends with him";
 			btn1 = document.createElement("BUTTON");
 			btn1.setAttribute("onClick", "changeStory('makeFriends')");
@@ -222,11 +222,12 @@ function displayStory(choice) {
 		case "makeFriends":
 		story = "You crack a funny joke at the supervisor. He looks at you blankly for a moment, but then his dark bearded face stretches into a smile. He pats your back and tells you that he will help you, sending you to a building in the distance.";
 			break;
+		//ACHIEVMENT: BUILDING
 			
 		case "standUpToSupervisor":
 		story = "The taunts that the supervisor shoots at the laborers anger you. You stand up and he narrows his eyes at you. For a brief moment, you glare at each other. Suddenly, all you can see is the glint of his sword in the sunlight and then....darkness. sorry, you're DEAD!";
 		break;
-		//GO BACK TO CHECKPOINT//
+		//RETURN TO CHECKPOINT//
 		
 	//(sword) standUp/keep head down
 	case "standUp/keepHeadDown":
@@ -246,33 +247,44 @@ function displayStory(choice) {
 		//RETURN TO CHECKPOINT
 		
 		case "standUp"
-		story = "The supervisor flings his knife at you in anger. Quickly thinking, you dart to the side and catch it. You run to a building in the distance, and foolishly promise to come back for the other workers.";
-			btn1 = document.createElement("BUTTON");
-			btn1.setAttribute("onClick", "changeStory('makeFriends')");
-			btn1.innerHTML = "Make friends";
-			btn2 = document.createElement("BUTTON");
-			btn2.setAttribute("onClick", "changeStory('deathBySup1')");
-			btn2.innerHTML = "Standup for the laborers";
-		break;
-//door 2	
+		story = "The taunts that the supervisor shoots at the laborers anger you. You stand up and he narrows his eyes at you. The supervisor flings his knife at you in anger. Quickly thinking, you dart to the side and catch it. You run to a building in the distance, and foolishly promise to come back for the other workers.";
+			break;
+		//ACHIEMENT: BUILDING
+		
+		
+		
+//Door 2	
 case "door2":
+//door 2 (bread)
 			if( bread ) {
 				displayStory("You use the end of your shirt to turn the knob, as it is too hot. You enter a dark forest of fire-blackened trees. The sky is so full of smog that it has a grayish tinge and it is impossible to tell whether it is day or night. The only light in the vicinity comes from the dim glow of flames licking at the trees. The faint howling of wolves can be heard in the distance, miles away. After a moment you realize the howls are getting louder and louder. Suddenly, a gray blur leaps out of the shadowy trees. Several more gray blurs follow it. You try to feed the bread to the wolves but your are in vain. The wolves lunge and pin you to the ground. The last thing you hear before the darkness consumes you is their howls. Sorry, you're DEAD!");
 			}
+			//door 2 (sword)
 			else {
 				displayStory("You use the end of your shirt to turn the knob, as it is too hot. You enter a dark forest of fire-blackened trees. The sky is so full of smog that it has a grayish tinge and it is impossible to tell whether it is day or night. The only light in the vicinity comes from the dim glow of flames licking at the trees. The faint howling of wolves can be heard in the distance, miles away. After a moment you realize the howls are getting louder and louder. Suddenly, a gray blur leaps out of the shadowy trees. Several more gray blurs follow it.");
 			}
 			break;
 				
-		case "run for door/climb tree":
+		case "runForDoor/climbTree":
 		story = "Since you chose the SWORD, you are able to fend off the wolves. However, there are too many of them. You desperately sprint off into the trees and see two options. You can either run for a rusty door covered in ivy, or climb a tree";
 			btn1 = document.createElement("BUTTON");
-			btn1.setAttribute("onClick", "changeStory('climb a tree')");
-			btn1.innerHTML = "You attempt to scramble up the tree, and feel the wolves' hot breath on your heels. You grab at a branch, but it breaks in your hand. You fall to the ground and are winded as your back crashes into the leaves. The wolves growl and pounce at you. Sorry, you're DEAD!";
+			btn1.setAttribute("onClick", "changeStory('ClimbTree')");
+			btn1.innerHTML = "Climb the tree";
 			btn2 = document.createElement("BUTTON");
-			btn2.setAttribute("onClick", "changeStory('run for door')");
-			btn2.innerHTML = "You manage to lever the door open with your sword. You quickly close the door behind you and barely escape the razor sharp teeth of the wild-eyed wolves. You are now in a dark, empty-halled building.";
+			btn2.setAttribute("onClick", "changeStory('runForDoor')");
+			btn2.innerHTML = "Run for the door";
 			break;
+			
+		case "climbTree": 
+			story = "You attempt to scramble up the tree, and feel the wolves' hot breath on your heels. You grab at a branch, but it breaks in your hand. You fall to the ground and are winded as your back crashes into the leaves. The wolves growl and pounce at you. Sorry, you're DEAD!";
+			break;
+			
+		case "runForDoor":
+			story = "You sprint towards the door as fast as your feet can go and manage to lever the door open with your sword. You quickly close the door behind you and barely escape the razor sharp teeth of the wild-eyed wolves. You are now in a dark, empty-halled building.";
+			break;
+			
+			
+			
 		case "standup/friends":
 			break;
 	}
@@ -284,6 +296,8 @@ case "door2":
     }
 	document.getElementById("buttons").appendChild(btn1);
     document.getElementById("buttons").appendChild(btn2);
+	
+	//make a button for checkpoints. set the attribute to make it go back to the case of the checkpoint.
 
 
 		
