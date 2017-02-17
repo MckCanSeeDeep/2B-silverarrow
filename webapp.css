@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* CSS Document */
-
+#rock, #sword {
+	display: none;
+}
 
 .button{
 	width: 40px;
