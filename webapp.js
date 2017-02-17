@@ -171,9 +171,6 @@ function story_inventory(choice) {
 	document.getElementById("story").innerHTML = "You pack the bread.";
 }
 
-//Door 1 or 2
-
-document.getElementById("story").innerHTML = "You notice a long hallway leading out of the cave. When you reach the end of the hallway, you are met with two doors. One is bright green and earthy, surrounded by vines. A cool breeze wafts from the crack beneath it. The other is black as coal, and is strangled with dried, withering tree branches. Intense heat flames from it. Which door will you use?";
 
 var bread;
 function displayStory(choice) {
@@ -183,6 +180,9 @@ function displayStory(choice) {
 	var btn1 = "";
 	var btn2 = "";
 	switch(choice) {
+		
+//Door 1 or 2
+case "Checkpoint1":
 		
 		case "bread":
 		case "sword":
@@ -226,6 +226,9 @@ function displayStory(choice) {
 			
 		case "standUpToSupervisor":
 		story = "The taunts that the supervisor shoots at the laborers anger you. You stand up and he narrows his eyes at you. For a brief moment, you glare at each other. Suddenly, all you can see is the glint of his sword in the sunlight and then....darkness. sorry, you're DEAD!";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "changeStory('Checkpoint1')");
+			btn1.innerHTML = "Try again from the last CHECKPOINT :)";
 		break;
 		//RETURN TO CHECKPOINT//
 		
@@ -243,6 +246,10 @@ function displayStory(choice) {
 			
 		case "keepHeadDown":
 		story = "Though you stay well hidden among the group of laborers, you notice the supervisor is eyeing you strangely. You realize that he sees the sword hidden in your belt. You look back at him, hoping he will do nothing. Suddenly, he nocks an arrow in the bow on his back. Before you can react, he has released the bowstring. Sorry, you're DEAD!";
+		
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "changeStory('Checkpoint1')");
+			btn1.innerHTML = "Try again from the last CHECKPOINT :)";
 	break;
 		//RETURN TO CHECKPOINT
 		
@@ -257,18 +264,24 @@ function displayStory(choice) {
 case "door2":
 //door 2 (bread)
 			if( bread ) {
-				displayStory("You use the end of your shirt to turn the knob, as it is too hot. You enter a dark forest of fire-blackened trees. The sky is so full of smog that it has a grayish tinge and it is impossible to tell whether it is day or night. The only light in the vicinity comes from the dim glow of flames licking at the trees. The faint howling of wolves can be heard in the distance, miles away. After a moment you realize the howls are getting louder and louder. Suddenly, a gray blur leaps out of the shadowy trees. Several more gray blurs follow it. You try to feed the bread to the wolves but your are in vain. The wolves lunge and pin you to the ground. The last thing you hear before the darkness consumes you is their howls. Sorry, you're DEAD!");
+				story ="You use the end of your shirt to turn the knob, as it is too hot. You enter a dark forest of fire-blackened trees. The sky is so full of smog that it has a grayish tinge and it is impossible to tell whether it is day or night. The only light in the vicinity comes from the dim glow of flames licking at the trees. The faint howling of wolves can be heard in the distance, miles away. After a moment you realize the howls are getting louder and louder. Suddenly, a gray blur leaps out of the shadowy trees. Several more gray blurs follow it. You try to feed the bread to the wolves but your are in vain. The wolves lunge and pin you to the ground. The last thing you hear before the darkness consumes you is their howls. Sorry, you're DEAD!";
+				btn1 = document.createElement("BUTTON");
+				btn1.setAttribute("onClick", "changeStory('Checkpoint1')");
+				btn1.innerHTML = "Try again from the last CHECKPOINT :)";
 			}
 			//door 2 (sword)
 			else {
-				displayStory("You use the end of your shirt to turn the knob, as it is too hot. You enter a dark forest of fire-blackened trees. The sky is so full of smog that it has a grayish tinge and it is impossible to tell whether it is day or night. The only light in the vicinity comes from the dim glow of flames licking at the trees. The faint howling of wolves can be heard in the distance, miles away. After a moment you realize the howls are getting louder and louder. Suddenly, a gray blur leaps out of the shadowy trees. Several more gray blurs follow it.");
+				story ="You use the end of your shirt to turn the knob, as it is too hot. You enter a dark forest of fire-blackened trees. The sky is so full of smog that it has a grayish tinge and it is impossible to tell whether it is day or night. The only light in the vicinity comes from the dim glow of flames licking at the trees. The faint howling of wolves can be heard in the distance, miles away. After a moment you realize the howls are getting louder and louder. Suddenly, a gray blur leaps out of the shadowy trees. Several more gray blurs follow it.";
+				btn1 = document.createElement("BUTTON");
+				btn1.setAttribute("onClick", "changeStory('runForDoor/climbTree')");
+				btn1.innerHTML = "Continue your journey...";		
 			}
 			break;
 				
 		case "runForDoor/climbTree":
 		story = "Since you chose the SWORD, you are able to fend off the wolves. However, there are too many of them. You desperately sprint off into the trees and see two options. You can either run for a rusty door covered in ivy, or climb a tree";
 			btn1 = document.createElement("BUTTON");
-			btn1.setAttribute("onClick", "changeStory('ClimbTree')");
+			btn1.setAttribute("onClick", "changeStory('climbTree')");
 			btn1.innerHTML = "Climb the tree";
 			btn2 = document.createElement("BUTTON");
 			btn2.setAttribute("onClick", "changeStory('runForDoor')");
@@ -277,6 +290,10 @@ case "door2":
 			
 		case "climbTree": 
 			story = "You attempt to scramble up the tree, and feel the wolves' hot breath on your heels. You grab at a branch, but it breaks in your hand. You fall to the ground and are winded as your back crashes into the leaves. The wolves growl and pounce at you. Sorry, you're DEAD!";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "changeStory('Checkpoint1')");
+			btn1.innerHTML = "Try again from the last CHECKPOINT :)";
+			
 			break;
 			
 		case "runForDoor":
@@ -285,8 +302,7 @@ case "door2":
 			
 			
 			
-		case "standup/friends":
-			break;
+	
 	}
 	// change content on page
 	document.getElementById("story").innerHTML = story;
