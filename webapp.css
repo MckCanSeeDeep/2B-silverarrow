@@ -29,7 +29,7 @@
 #choices {
 		float:left;
 		width: 500px;
-		height:385px;
+		height:400px;
 }
 
 #goal {
@@ -40,9 +40,9 @@
 
 #explanation {
 		float: left;
-		width: 950px;
-		padding: 5px;
-		margin: 20px auto;
+		height: 200px;
+		width: 895px;
+		
 	
 }
 
@@ -54,15 +54,86 @@
 
 body {
 		font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
-		color: ;
+		color: #B6BCCE;
 		background-color:;
 		background-size: 100%;
+		background-image:url(images/forest2.jpg)
 }
 
 #health, #goal, #choices, #inventory, #explanation {
-		background-color: rgba(0, 178, 142, 0.8);
+		background-color: rgba(78, 83, 111, 0.8);
 		margin-bottom: 10px;
 		border-radius: 15px;
 		padding-left: 10px;
 		padding-right: 50px;
+		border-style:outset;
+		border-color: white;
+}
+
+
+/*----------------------------------------
+
+
+				RESPONSIVE (MEDIA QUERIES)
+
+
+--------------------------------------*/
+
+@media screen and (max-width: 980px) {
+	#wrapper {
+		width: 94%;
+	}
+	#content {
+		width: 62%;
+	}
+	#sidebar {
+		width: 29%;
+	}
+
+}
+
+@media screen and (max-width: 700px) {
+		#content, #sidebar {
+				width: auto;
+				float: none;	
+		}
+		#header {
+				height: auto;	
+		}
+
+}
+
+@media screen and (max-width: 480px) {
+		#header {
+			height: auto;
+		}
+		h1 {
+			font-size: 24px;
+		}
+		#sidebar {
+			float: none;	
+		}
+}
+
+/*PHONES*/
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px) {
+	body {
+		font-size: 40px;
+	}
+	#header {
+		height: auto;
+	}
+	#content {
+		width: auto;
+	}
+	#sidebar {
+		width: auto;
+		clear: both;
+	}
+	#header, #sidebar, #content, #footer {
+		border-radius: 16px;
+		border-width: 8px;
+	}
 }
