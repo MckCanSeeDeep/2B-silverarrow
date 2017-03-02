@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
  
 
 <div id="wrapper">
@@ -23,6 +22,7 @@
 	<img id="bread" src="images/bread.png" width="40" height="40" alt=""/>
 	<img id="bread" src="images/bread.png" width="40" height="40" alt=""/>
 	<img id="bread" src="images/bread.png" width="40" height="40" alt=""/>
+	
 	
 	<p>
 	<img src="images/heart.png" width="40" height="40" alt=""/>
@@ -41,18 +41,18 @@
 	
 	<div id="choices">
 		<h2>choices</h2>
-
+<div id="buttons">
 <input type="button"
 value="SWORD"
- onClick="bread = false; changeStory('sword')">
+ onClick="bread = false; displayStory('Checkpoint1');">
  <p>A powerful blade...</p>
 
 <input type="button"
  value="BREAD"
- onClick="bread=true; changeStory('sword')">
+ onClick="bread=true; displayStory('Checkpoint1');">
  <p>Warm toasted sustenance...</p>
  
-
+</div>
 	</div>
 	
 	
@@ -67,8 +67,8 @@ value="SWORD"
 	
 	</div>
 	
-	<div id ="explanation">
-		<p>You wake up in a dark, dreary cave. You have no memory of your previous life, and the only thing in your mind is the echo of water dripping from the ceiling.You see two things in the cave: A sword and a backage of bread. Which do you take? Only one will fit in your backpack.</p>
+	<div id ="story">
+		<p>You wake up in a dark, dreary cave. You have no memory of your previous life, and the only thing in your mind is the echo of water dripping from the ceiling.You see two things in the cave: A sword and a package of bread. Which do you take? Only one will fit in your backpack.</p>
 	</div>
 
 

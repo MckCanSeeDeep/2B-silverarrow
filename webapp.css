@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 /* CSS Document */
 #rock, #sword {
@@ -38,7 +39,7 @@
 	
 }
 
-#explanation {
+#story {
 		float: left;
 		width: 950px;
 		padding: 5px;
@@ -59,7 +60,7 @@ body {
 		background-size: 100%;
 }
 
-#health, #goal, #choices, #inventory, #explanation {
+#health, #goal, #choices, #inventory, #story {
 		background-color: rgba(0, 178, 142, 0.8);
 		margin-bottom: 10px;
 		border-radius: 15px;
