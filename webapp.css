@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 /* CSS Document */
 #rock, #sword {
@@ -38,7 +39,7 @@
 	
 }
 
-#explanation {
+#story {
 		float: left;
 		height: 200px;
 		width: 895px;
@@ -60,8 +61,13 @@ body {
 		background-image:url(images/forest2.jpg)
 }
 
+<<<<<<< HEAD
 #health, #goal, #choices, #inventory, #explanation {
 		background-color: rgba(78, 83, 111, 0.8);
+=======
+#health, #goal, #choices, #inventory, #story {
+		background-color: rgba(0, 178, 142, 0.8);
+>>>>>>> origin/version1.0
 		margin-bottom: 10px;
 		border-radius: 15px;
 		padding-left: 10px;
