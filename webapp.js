@@ -1,6 +1,6 @@
 
 // JavaScript Document
-
+//Use for storylines
 //Introduction
 	
 	
@@ -187,7 +187,7 @@ else {
 			btn1.innerHTML = "Continue your journey...";		
 			}
 			break;
-				
+			
 case "runForDoor/climbTree":
 			story = "Since you chose the SWORD, you are able to fend off the wolves. However, there are too many of them. You desperately sprint off into the trees and see two options. You can either run for a rusty door covered in ivy, or climb a tree";
 			btn1 = document.createElement("BUTTON");
