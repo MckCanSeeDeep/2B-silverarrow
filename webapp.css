@@ -30,7 +30,7 @@
 #choices {
 		float:left;
 		width: 500px;
-		height:400px;
+		height: 215px;
 }
 
 #goal {
@@ -41,8 +41,8 @@
 
 #story {
 		float: left;
-		height: 200px;
-		width: 895px;
+		height: 175px;
+		width: 500px;
 		
 	
 }
@@ -54,11 +54,10 @@
 }
 
 body {
-		font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+		font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
 		color: #B6BCCE;
-		background-color:;
-		background-size: 100%;
-		background-image:url(images/forest2.jpg)
+		background-size: 150%;
+		background-image:url(backgrounds/forest2.jpg)
 }
 
 
@@ -69,7 +68,7 @@ body {
 	
 
 		margin-bottom: 10px;
-		border-radius: 15px;
+		border-radius: 2px; 
 		padding-left: 10px;
 		padding-right: 50px;
 		border-style:outset;
@@ -89,34 +88,40 @@ body {
 	#wrapper {
 		width: 94%;
 	}
-	#content {
-		width: 62%;
+	#story, #choices, #goal {
+		width: 40%;
 	}
-	#sidebar {
+	#health, #inventory {
 		width: 29%;
+		length: 20%;
 	}
-
+	
+	
 }
 
 @media screen and (max-width: 700px) {
-		#content, #sidebar {
+		#sidebar {
 				width: auto;
 				float: none;	
 		}
 		#header {
 				height: auto;	
 		}
+		
+		#inventory {
+			float: right;
+		}
 
 }
 
 @media screen and (max-width: 480px) {
-		#header {
+		#goal {
 			height: auto;
 		}
 		h1 {
 			font-size: 24px;
 		}
-		#sidebar {
+		#health {
 			float: none;	
 		}
 }
@@ -128,17 +133,20 @@ and (max-device-width: 568px) {
 	body {
 		font-size: 40px;
 	}
-	#header {
+	#goal {
+		width:auto;
 		height: auto;
 	}
-	#content {
+	#choices {
 		width: auto;
+		height:auto;
 	}
-	#sidebar {
+	#health {
 		width: auto;
+		height:auto;
 		clear: both;
 	}
-	#header, #sidebar, #content, #footer {
+	#goal, #choices, #story, #health, #inventory {
 		border-radius: 16px;
 		border-width: 8px;
 	}
