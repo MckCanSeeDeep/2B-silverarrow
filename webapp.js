@@ -141,6 +141,9 @@ case "door1":
 		
 case "makeFriends":
 			story = "You crack a funny joke at the supervisor. He looks at you blankly for a moment, but then his dark bearded face stretches into a smile. He pats your back and tells you that he will help you, sending you to a building in the distance.";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('continue')");
+			btn1.innerHTML = "Continue...";
 			break;
 			//ACHIEVEMENT: BUILDING
 			
@@ -164,6 +167,9 @@ case "keepHeadDown":
 		
 case "standUp":
 			story = "The taunts that the supervisor shoots at the laborers anger you. You stand up and he narrows his eyes at you. The supervisor flings his knife at you in anger. Quickly thinking, you dart to the side and catch it. You run to a building in the distance, and foolishly promise to come back for the other workers.";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('continue')");
+			btn1.innerHTML = "Continue...";
 			break;
 		//ACHIEMENT: BUILDING
 		
@@ -207,8 +213,57 @@ case "climbTree":
 			
 case "runForDoor":
 			story = "You sprint towards the door as fast as your feet can go and manage to lever the door open with your sword. You quickly close the door behind you and barely escape the razor sharp teeth of the wild-eyed wolves. You are now in a dark, empty-halled building.";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('continue')");
+			btn1.innerHTML = "Continue...";
 			break;
 			
+case "Checkpoint2":		
+case "continue":
+story = "As you sneak through the building, wondering if it is inhabited, you hear a chorus of thousands of footsteps. You begin to run, and come to a supply room with an opened door. Your go inside and there is an exit on either side of you. A figure runs in from each side. One is a violet-eyed girl with a long sheet of dark hair. The other is a confident-looking, brown-haired youth. Both yell for you to come with them if you want to live. Who will be your companion? Choose wisely.";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('Alec')");
+			btn1.innerHTML = "The brown haired warrior";
+			btn2 = document.createElement("BUTTON");
+			btn2.setAttribute("onClick", "displayStory('Violet')");
+			btn2.innerHTML = "The violet eyed girl";
+			break;
+case "Checkpoint3":		
+case "Alec":
+story="You run towards the brown haired boy, happy to be heading away from the increasingly loud footsteps. He introduces himself as Alec, and drags you to a door that you never would have noticed if you were on your own. it was a wise decision to choose him. As you slide through the door, you realize that the footsteps have become quieter. Alec stumbles over a pipe. As you help him up, you hear a large crash nearby. Do you choose to run after Alec, or do you you knock him out and leave him behind for whatever caused the sound?";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('runTogether')");
+			btn1.innerHTML = "Run after Alec";
+			btn2 = document.createElement("BUTTON");
+			btn2.setAttribute("onClick", "displayStory('knockHimOut')");
+			btn2.innerHTML = "Knock Alec out";
+			break;
+			
+case "knockHimOut":
+	story="You slyly grab a broken piece of pipe from the ground and forcefully strike Alec in a swift blow to the head. He crumples to the ground and you make a dash for the closest out of the three doors in the room. As you turn to see if you are being followed, you trip backwards and realize you are falling through the air. Suddenly you hit something hot and the burning liquid you land in sears your skin before engulfing you. Sorry, you're DEAD!";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('Checkpoint2')");
+			btn1.innerHTML = "Try again from the last checkpoint ;)";
+			break;
+			
+case "runTogether":
+	story="You follow Alec through a maze of doorways and thank him when he grabs your arm to stop you from falling into a vat of boiling oil. You run for what seems like hours, and finally slow to a walk. It seems as though there is no way to escape the building. You hear a low, raspy voice say 'The Silver Arrow is near. Once it is found, we will at last have a purpose.' It is a man wearing a black hood. He appears to have a weapon. Do you stay to fight him, or do you hide?";
+			btn1.setAttribute("onClick", "displayStory('fightHood')");
+			btn1.innerHTML = "Fight";
+			btn2 = document.createElement("BUTTON");
+			btn2.setAttribute("onClick", "displayStory('hideFromHood')");
+			btn2.innerHTML = "Hide";
+			break;
+			
+case "fightHood":
+	story="You and Alec circle around the figure. Suddenly, you feel an invisible force pressing on your neck. In a few minutes, your vision fades to black. Sorry, you're DEAD!";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('Checkpoint3')");
+			btn1.innerHTML = "Try again from the last checkpoint ;)";
+			break;
+
+
+
 			
 			
 	
