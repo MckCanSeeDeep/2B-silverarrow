@@ -82,6 +82,7 @@
 	*/
 
 var bread = true;
+var sword = true;
 function displayStory(choice) {
 	var story = "";
 	var btn1 = "";
@@ -114,7 +115,7 @@ case "sword":
 		
 //door 1	
 case "door1":
-			if(bread) {
+			if (bread) {
 				story = "You turn the mahogany handle of the door. You emerge on a hill surrounded by rolling fields. Down the hill, peasants drenched in sweat and dressed in faded rags labor away, picking some kind of pale blue cotton. Cruel-faced supervisors pace behind them, watching their work and carrying sharp-looking batons. You walk down the hill, hoping that your own tattered clothes will blend in with theirs. You come to an area where no supervisors seem to be watching. You chose the BREAD. The people have hunger-hollowed cheeks, so you give them some of your bread. They immediately trust you, and allow you to work beside them and hide yourself. The few people near you now trust you, and they decide to help conceal you. The supervisor arrives to monitor your laboring progress and begins taunting those beside you. Will you stand up to the supervisor or make friends with him";
 				btn1 = document.createElement("BUTTON");
 				btn1.setAttribute("onClick", "displayStory('makeFriends')");
@@ -124,7 +125,7 @@ case "door1":
 				btn2.innerHTML = "Stand up to the supervisor";
 				//image = "";
 			}
-			else {
+			if(sword) {
 				story = "You turn the mahogany handle of the door. You emerge on a hill surrounded by rolling fields. Down the hill, peasants drenched in sweat and dressed in faded rags labor away, picking some kind of pale blue cotton. Cruel-faced supervisors pace behind them, watching their work and carrying sharp-looking batons. You walk down the hill, hoping that your own tattered clothes will blend in with theirs. You come to an area where no supervisors seem to be watching. You chose the BREAD. The people have hunger-hollowed cheeks, so you give them some of your bread. They immediately trust you, and allow you to work beside them and hide yourself. The few people near you now trust you, and they decide to help conceal you. The supervisor arrives to monitor your laboring progress and begins taunting those beside you. Will you stand up to the supervisor or keep your head down and continue working?";
 				btn1 = document.createElement("BUTTON");
 				btn1.setAttribute("onClick", "displayStory('keepHeadDown')");
