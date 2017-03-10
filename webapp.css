@@ -86,6 +86,7 @@
 		width: 500px;
 	
 		
+		
 	
 }
 
@@ -148,9 +149,17 @@ body {
 		width: 40%;
 	}
 	#health, #inventory {
-		width: 29%;
+		width: 39%;
 		length: 20%;
 	}
+	#story {
+		height: 500px;
+	}
+	#inventory {
+		height: 623px;
+		
+	}
+	
 	
 	
 }
@@ -169,14 +178,23 @@ body {
 		}
 		
 		#story, #choices {
-			font-size: 13px;	
+			font-size: 14px;	
 		}
 		
 		#bread, #heart {
-			width: 15px;
-			height: 15px;
+			width: 20px;
+			height: 20px;
 		}
 
+		
+		
+		#inventory {
+			height: 812px;	
+		}
+	 	#story {
+		width: 40%;
+		height: 648px;	
+		}
 }
 
 @media screen and (max-width: 480px) {
@@ -189,34 +207,48 @@ body {
 		#health {
 			float: none;	
 		}
+		
+		
+		
+		#health, #goal, #choices, #inventory, #story {
+		width: 300px;	
+		float: right;
+		}
 }
 
 /*PHONES*/
 @media only screen
 and (min-device-width: 320px)
 and (max-device-width: 568px) {
-	#story {
-		font-size: 20px;
-	}
+	
 	#goal {
 		width:auto;
 		height: auto;
+	
 	}
 	#choices {
 		width: auto;
-		height:30%;
+		height:20%;
+			float: left;
 	}
 	#health {
 		width: auto;
 		height:auto;
-		clear: both;
+		float: left;
 	}
 	#goal, #choices, #story, #health, #inventory {
 		border-radius: 16px;
 		border-width: 8px;
+		float: left;
+	
+
+	}
+	#health, #inventory {
+		float: left;
 	}
 	
 	#story {
-		height: 300px;	
+		height: 200px;	
+		font-size: 20px;
 	}
 }
