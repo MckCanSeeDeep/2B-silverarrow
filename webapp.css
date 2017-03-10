@@ -167,6 +167,15 @@ body {
 		#inventory {
 			float: right;
 		}
+		
+		#story, #choices {
+			font-size: 13px;	
+		}
+		
+		#bread, #heart {
+			width: 15px;
+			height: 15px;
+		}
 
 }
 
@@ -175,7 +184,7 @@ body {
 			height: auto;
 		}
 		h1 {
-			font-size: 24px;
+			font-size: 12px;
 		}
 		#health {
 			float: none;	
@@ -186,8 +195,8 @@ body {
 @media only screen
 and (min-device-width: 320px)
 and (max-device-width: 568px) {
-	body {
-		font-size: 40px;
+	#story {
+		font-size: 20px;
 	}
 	#goal {
 		width:auto;
@@ -195,7 +204,7 @@ and (max-device-width: 568px) {
 	}
 	#choices {
 		width: auto;
-		height:auto;
+		height:30%;
 	}
 	#health {
 		width: auto;
@@ -205,5 +214,9 @@ and (max-device-width: 568px) {
 	#goal, #choices, #story, #health, #inventory {
 		border-radius: 16px;
 		border-width: 8px;
+	}
+	
+	#story {
+		height: 300px;	
 	}
 }
