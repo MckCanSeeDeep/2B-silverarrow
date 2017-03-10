@@ -81,8 +81,8 @@
 	}
 	*/
 
-var bread = true;
-var sword = true;
+var bread = false;
+var sword = false;
 function displayStory(choice) {
 	var story = "";
 	var btn1 = "";
@@ -186,7 +186,7 @@ if( bread ) {
 			btn1.innerHTML = "Try again from the last CHECKPOINT";
 			}
 //door 2 (sword)
- if (sword) {
+else if (sword) {
 			story ="You use the end of your shirt to turn the knob, as it is too hot. You enter a dark forest of fire-blackened trees. The sky is so full of smog that it has a grayish tinge and it is impossible to tell whether it is day or night. The only light in the vicinity comes from the dim glow of flames licking at the trees. The faint howling of wolves can be heard in the distance, miles away. After a moment you realize the howls are getting louder and louder. Suddenly, a gray blur leaps out of the shadowy trees. Several more gray blurs follow it.";
 			btn1 = document.createElement("BUTTON");
 			btn1.setAttribute("onClick", "displayStory('runForDoor/climbTree')");
@@ -276,7 +276,7 @@ case "hideFromHood":
 			break;
 
 case "threatenAlec":
-		story = "You grab a knife from your belt and raise it threateningly. You demand that he explain about the silver arrow, but he sighs and relents. 'It's time I told you what I know.'";
+		story = "You grab a knife from your belt and raise it threateningly. You demand that he explain about the silver arrow, but he sighs and relents.";
 			btn1 = document.createElement("BUTTON");
 			btn1.setAttribute("onClick", "displayStory('Checkpoint5')");
 			btn1.innerHTML = "Acquire Information";
@@ -284,7 +284,7 @@ case "threatenAlec":
 			break;	
 			
 case "convinceAlec":
-		story  = "You compel Alec to tell you about the Silver Arrow by bringing out your persuasive skills. You say, 'I deserve to know what's going on.' He stares at you for a while and then gives in. 'It's time I told you what I know' ";
+		story  = "You compel Alec to tell you about the Silver Arrow by bringing out your persuasive skills. You say, 'I deserve to know what's going on.' He stares at you for a while and then gives in.";
 			btn1 = document.createElement("BUTTON");
 			btn1.setAttribute("onClick", "displayStory('Checkpoint5')");
 			btn1.innerHTML = "Acquire Information";
@@ -316,7 +316,7 @@ case "stayStill":
 	
 			
 case "setUpCamp":
-			story = "You and Violet follow a maze of hallways before stopping at a small corner isolated from the rest of the building. She opens her backpack and shares some of her supplies with you. Suddenly, you hear the sound of footsteps drawing near. Violet wraps her hand against your mouth to muffle your surprise. The footsteps stop closeby and the voices seem to be whispering about a mysterious object called the silver arrow. 'It is almost time. The silver arrow is near and once we have aqquired it, we will have a purpose at last.' The footsteps recede and you look at Violet questioningly. She sighs, looks at the ground and says 'It's time I told you what I know' ";
+			story = "You and Violet follow a maze of hallways before stopping at a small corner isolated from the rest of the building. She opens her backpack and shares some of her supplies with you. Suddenly, you hear the sound of footsteps drawing near. Violet wraps her hand against your mouth to muffle your surprise. The footsteps stop closeby and the voices seem to be whispering about a mysterious object called the silver arrow. 'It is almost time. The silver arrow is near and once we have aqquired it, we will have a purpose at last.' The footsteps recede and you look at Violet questioningly. She sighs, looks at the ground. ";
 			btn1 = document.createElement("BUTTON");
 			btn1.setAttribute("onClick", "displayStory('Checkpoint5')");
 			btn1.innerHTML = "Acquire Information";
@@ -324,9 +324,47 @@ case "setUpCamp":
 	
 			
 case "Checkpoint5":
-
+			story = "'It's time I told you what I know'. What do you want to know first?";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('howDidIGetHere')");
+			btn1.innerHTML = "How did I get here?";
+			btn2 = document.createElement("BUTTON");
+			btn2.setAttribute("onClick", "displayStory('whatIsTheSilverArrow')");
+			btn2.innerHTML = "What is the Silver Arrow?";
 			break; 
-	
+			
+case "howDidIGetHere":
+			story = "'Your companion starts to explain. 'So this is basically a realm created by the leaders of a promindent buisness empire. It's pretty mcuh a compilation of virtual reality and the perception of people in the real world. You probably came here after a queer business seminar like all of the other people in this world. Moral of the story: Don't drink the Kool-Aid. As for the Silver Arrow, It's more of a phenomenon than a tangible object. Its rumored to be some kind of EMP that fries the technology imprisoning your brain. We need it to get out of here. We should rest so we have a better chance of finding it.' ";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory(rest')");
+			btn1.innerHTML = "Rest and prepare for the journey to come";
+			break; 
+			
+case "whatIsTheSilverArrow":
+			story = "'It's more of a phenomenon than a tangible object. Its rumored to be some kind of EMP that fries the technology imprisoning your brain. We need it to get out of here. We should rest so we have a better chance of finding it. And as for how you got here, this is basically a realm created by the leaders of a promindent buisness empire. It's pretty mcuh a compilation of virtual reality and the perception of people in the real world. You probably came here after a queer business seminar like all of the other people in this world. Moral of the story: Don't drink the Kool-Aid.' ";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('rest')");
+			btn1.innerHTML = "Rest and prepare for the journey to come";
+			break; 
+			
+/*case "rest":
+			story = "You and you're companion rest in your secluded corner, discussing your game plan for the next day. You feel confident about the plan, but forget about that as the darkness of sleep envelops you.";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('continueAgain')");
+			btn1.innerHTML = "Continue";
+			break; 
+			
+case "continueAgain":
+			story = "You wake up to the sound of your companion rifling through your supplies for the day. You start to pack as well, and decide that you will be heading out in a few moments. As you leave the building you are faced with a broken wooden fence and a white picket fence. Which will you choose?";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('brokenFence')");
+			btn1.innerHTML = "Broken Fence";
+			btn2 = document.createElement("BUTTON");
+			btn2.setAttribute("onClick", "displayStory('whitePicketFence')");
+			btn2.innerHTML = "White Picket Fence";
+			break;
+		
+	*/
 	
 	} // end switch
 	
