@@ -1,17 +1,10 @@
 
 @charset "UTF-8";
 /* CSS Document */
-
-
-
-
-/*#rock, #sword, #rope, #pocketknife, #waterbottle, #driedfruit {
-	position: absolute;
-    z-index: 1;
-	tool-tip: hover;
+	
 	
 }
-
+/*
 #tooltip {
 	text-decoration: none;
 	position: relative;
@@ -39,6 +32,10 @@
 	padding:8px;
 }
 */
+
+/*TOOLTIP*/
+
+
 
 #rock, #sword, #pocketknife {
 	display: none;
@@ -84,7 +81,8 @@
 		float: left;
 		height: 400px;
 		width: 500px;
-	
+		padding-top: 3px;
+		
 		
 		
 	
@@ -110,26 +108,22 @@
 }
 
 body {
-		font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
-		color: #B6BCCE;
-		background-size: 150%;
-		background-image:url(backgrounds/forest2.jpg);
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	color: #B6BCCE;
+	background-size: 150%;
+	background-image:url(backgrounds/forest2.jpg);
 		
 }
 
 
 #health, #goal, #choices, #inventory, #story {
-		background-color: rgba(78, 83, 111, 0.8);
-
-
-	
-
-		margin-bottom: 10px;
-		border-radius: 2px; 
-		padding-left: 10px;
-		padding-right: 50px;
-		border-style:outset;
-		border-color: white;
+	background-color: rgba(78, 83, 111, 0.8);
+	margin-bottom: 10px;
+	border-radius: 2px; 
+	padding-left: 10px;
+	padding-right: 50px;
+	border-style:outset;
+	border-color: white;
 }
 
 
@@ -174,14 +168,12 @@ body {
 			width: 20px;
 			height: 20px;
 		}
-
-		
 		
 		#inventory {
-			height: 812px;	
+			height: 150px;	
 		}
 	 	#story {
-			height: 648px;	
+			height: 300px;	
 		}
 		#health, #goal, #choices, #inventory, #story {
 			float: none;
@@ -209,30 +201,13 @@ body {
 and (min-device-width: 320px)
 and (max-device-width: 568px) {
 	
-	/*#goal {
-		width:auto;
-		height: auto;
 	
-	}
-	#choices {
-		width: auto;
-		height:20%;
-		float: left;
-	}
-	*/
-	#goal, #choices {
-			
-	}
-
 	#goal, #choices, #story, #health, #inventory {
 		border-radius: 16px;
 		border-width: 8px;
 		float: none;
 		width: auto;
-	
-
-	}
-	
+		}
 	
 	#story {
 		height: 200px;	
