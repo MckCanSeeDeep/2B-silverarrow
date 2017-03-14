@@ -336,7 +336,7 @@ case "Checkpoint5":
 case "howDidIGetHere":
 			story = "'Your companion starts to explain. 'So this is basically a realm created by the leaders of a promindent buisness empire. It's pretty mcuh a compilation of virtual reality and the perception of people in the real world. You probably came here after a queer business seminar like all of the other people in this world. Moral of the story: Don't drink the Kool-Aid. As for the Silver Arrow, It's more of a phenomenon than a tangible object. Its rumored to be some kind of EMP that fries the technology imprisoning your brain. We need it to get out of here. We should rest so we have a better chance of finding it.' ";
 			btn1 = document.createElement("BUTTON");
-			btn1.setAttribute("onClick", "displayStory(rest')");
+			btn1.setAttribute("onClick", "displayStory('rest')");
 			btn1.innerHTML = "Rest and prepare for the journey to come";
 			break; 
 			
@@ -347,13 +347,13 @@ case "whatIsTheSilverArrow":
 			btn1.innerHTML = "Rest and prepare for the journey to come";
 			break; 
 			
-/*case "rest":
+case "rest":
 			story = "You and you're companion rest in your secluded corner, discussing your game plan for the next day. You feel confident about the plan, but forget about that as the darkness of sleep envelops you.";
 			btn1 = document.createElement("BUTTON");
 			btn1.setAttribute("onClick", "displayStory('continueAgain')");
 			btn1.innerHTML = "Continue";
 			break; 
-			
+case "Checkpoint6":		
 case "continueAgain":
 			story = "You wake up to the sound of your companion rifling through your supplies for the day. You start to pack as well, and decide that you will be heading out in a few moments. As you leave the building you are faced with a broken wooden fence and a white picket fence. Which will you choose?";
 			btn1 = document.createElement("BUTTON");
@@ -363,9 +363,65 @@ case "continueAgain":
 			btn2.setAttribute("onClick", "displayStory('whitePicketFence')");
 			btn2.innerHTML = "White Picket Fence";
 			break;
-		
-	*/
+			
+case "brokenFence":
+			story = "You hop the fence lithely and with ease. Your companion is loaded with heavy bags and impales their leg on a splintered plank of wood. You stare at the wound in horror. Suddenly you see a strange glow at the edge of a cliff nearby. You grab your companion around the shoulders and make your way to the cliff.";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('goToCliff')");
+			btn1.innerHTML = "Go to edge of the cliff";
+			break;
 	
+case "whitePicketFence":
+			story = "You unlatch the gate of the fence and continue on your way. You head towards the dark forest ahead and arrive at a clearing. On your right, a startlingly blue baby bird hops down a dirt path. On your left, a trail of lush plant life leads off into the trees. Which way do you go?";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('babyBird')");
+			btn1.innerHTML = "Right, after the baby bird";
+			btn2 = document.createElement("BUTTON");
+			btn2.setAttribute("onClick", "displayStory('plantLife')");
+			btn2.innerHTML = "Left, towards the plants";
+			break;
+			
+case "babyBird":
+			story = "You follow the baby bird into a more humid part of the forest, where brightly colored birds flock in the trees. A very large red bird locks its beady eyes on you. Suddenly, a whirlwind of birds attacks you. There is nothing you and your companion can do as you are overrun. You're DEAD. Try again from the last checkpoint. ";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('Checkpoint6')");
+			btn1.innerHTML = "Return to last CHECKPOINT";
+			break;
+
+case"plantLife":
+story = "You follow the trail of abundant plant life. It leads you to a cheerfully bubbling spring of water. You and your companion sit down to replenish your supplies. Do you continue to sit and rest or keep looking for the cliff on which the Silver Arrow is rumored to be located? ";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('sitRest')");
+			btn1.innerHTML = "Sit and rest";
+			btn2 = document.createElement("BUTTON");
+			btn2.setAttribute("onClick", "displayStory('keepSearching')");
+			btn2.innerHTML = "Keep searching";
+			break;
+			
+case "sitRest":
+			story = "You and your companion blissfully relax at the edge of the pond into which the spring empties. Suddenly, you hear growls from the leafy foliage. A pack of furry creatures leaps out of the trees. There is no time to see what they are. Do you run away from them, or stay and fight?";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('runFromFuzzies')");
+			btn1.innerHTML = "Run from the creatures";
+			btn2 = document.createElement("BUTTON");
+			btn2.setAttribute("onClick", "displayStory('fightFuzzies')");
+			btn2.innerHTML = "Fight the creatures";
+			break;
+		
+			
+case "runFromFuzzies":
+			story = "You and your companion attempt to run from the furry creatures, but one of them drops out of a tree, right on to you. Sorry, you're DEAD. Try again from the last CHECKPOINT.";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('Checkpoint6')");
+			btn1.innerHTML = "Return to last CHECKPOINT";
+			break;
+			
+case "fightFuzzies":		
+			story = "You and your companion draw your weapons, attempting to fight off the beasts. However, your companion is severely injured, while you have a large gash on your forehead. You grab onto a vine and snatch your partner with your other hand.  ";
+			btn1 = document.createElement("BUTTON");
+			btn1.setAttribute("onClick", "displayStory('continueToCliff')");
+			btn1.innerHTML = "Continue to the cliff";
+			break;
 	} // end switch
 	
 	// change content on page
