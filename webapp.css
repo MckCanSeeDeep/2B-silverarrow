@@ -2,7 +2,54 @@
 @charset "UTF-8";
 /* CSS Document */
 	
-	
+#sword, #rock {
+	display: none;	
+}
+}
+
+position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
 /*
 #tooltip {
@@ -49,6 +96,9 @@
 	margin-left: 17px;
 	cursor: pointer;
 	border-top: 2px solid transparent;
+	transition-property: background;
+	transition-duration: 1s;
+	transition-timing-function: ease-in-out;
 	
 }
 
@@ -141,6 +191,7 @@ body {
 	}
 	#story, #choices, #goal {
 		width: 40%;
+		font-size: 13px;
 	}
 	#health, #inventory {
 		width: 39%;
@@ -148,6 +199,7 @@ body {
 	}
 	#story {
 		height: 500px;
+		padding-top: 9px;
 	}
 	#inventory {
 		height: 623px;
@@ -170,7 +222,7 @@ body {
 		}
 		
 		#inventory {
-			height: 150px;	
+			height: 200px;	
 		}
 	 	#story {
 			height: 300px;	
@@ -186,7 +238,7 @@ body {
 			height: auto;
 		}
 		
-		h1 {
+		#health, #goal, #choices {
 			font-size: 12px;
 		}
 		#health {
