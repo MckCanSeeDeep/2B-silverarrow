@@ -7,13 +7,10 @@
 }
 }
 
-position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-}
+
 
 /* Tooltip text */
-.tooltip .tooltiptext {
+.tooltip .tooltiptext .waterbottle {
     visibility: hidden;
     width: 120px;
     background-color: #555;
@@ -51,7 +48,8 @@ position: relative;
     visibility: visible;
     opacity: 1;
 }
-/*
+
+/* Mr. Scheurlein's code ---------------------
 #tooltip {
 	text-decoration: none;
 	position: relative;
@@ -78,9 +76,7 @@ position: relative;
 	overflow:hidden;
 	padding:8px;
 }
-*/
-
-/*TOOLTIP*/
+--------------------------*/
 
 
 
